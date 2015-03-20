@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>{% block title %}RolnikApp{% endblock %}</title>
+</head>
+<div align='right'>
+{% if user.is_authenticated %}
+<a href="{% url 'account_logout'%}">Wyloguj sie</a>
+{% else %}
+    <a href="{% url 'account_login'%}">Zaloguj sie</a>
+    <a href="{% url 'account_signup'%}">Zaloz konto</a>
+{% endif %}
+</div>
+<center>
+MENU: <a href="{% url 'homepage' %}">Strona glowna</a> | <a href="{% url 'contact' %}">Kontakt</a>
+<table border=1 width=700>
+<tr><td>
+{% block content %}
+
+{% endblock %}
+</td></tr>
+</table>
+</center>
+<center>
+    {% block stopka %}
+    (c) RolnikApp
+    {% endblock %}
+</center>
+</html>

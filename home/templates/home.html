@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {% for home in object_list %}
+    {{ home.title }}
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+<h1>Czy praca rolnika może być ławiejsza i przyjemniejsza?</h1>
+Witaj!<br><br>
+Czy jesteś z zawodu Rolnikiem? Czy Twoją pasją i życiowym powołaniem jest praca na roli? Jesteś właścicielem zwierząt, ruchomości lub nieruchomości? Jeśli chociaż na jedno pytanie odpowiedziałeś TAK!, to pragniemy Cię poinformować, że jesteś pod właściwym adresem.
+<br><br>
+Rolnictwo jest niewyobrażalnie ważne dla naszej gospodarki i dla każdego z nas. Wszyscy korzystamy z efektów pracy prawdziwych rolników. Widzimy, że prawdziwy rolnik jest osobą konkretną i podchodzącą na poważnie do swojej pracy. Jego celem jest wydajność oraz jakość tego, co wyprodukuje. I z takimi ludźmi chcemy rozmawiać na temat powiększenia wygody ich pracy. 
+<br><br>
+Zauważyliśmy, że mimo tego, iż rolnictwo jest niewiarygodnie ważne dla każdego mieszkańca ziemi, to jednak w Polsce jest bardzo mało projektów informatycznych, które pochylają się nad tą branżą. I tu znaleźliśmy miejsce dla siebie. No bo skoro nowoczesny rolnik potrzebuje narzędzi informatycznych do zarządzania swoim gospodarstwem, to trzeba mu ich dostarczyć! My postanowiliśmy to zrobić.
+<br><br>
+Na chwilę obecną skupiliśmy się na stworzeniu narzędzi dla osób, które zarządzają swoimi zwierzętami. Nie ważne czy jesteś właścicielem krów, świń czy innych zwierząt. U nas dostaniesz profesjonalne narzędzie, które pozwoli Ci mieć kontrolę nad swoimi zwierzętami. Oczywiście mamy świadomość, że rolnictwo w tym wypadku to coś więcej niż zarządzanie inwentarzem żywym. Dlatego postanowiliśmy wziąć pod lupę również zarządzanie ruchomościami i nieruchomościami.
+<br><br>
+Naszym zadaniem jest maksymalnie ułatwić Ci pracę. Niektórzy rolnicy korzystają już z komputerów przy swoich działaniach. Najczęściej używają do tego arkuszy kalkulacyjnych. Faktem jest, że są to bardzo rozbudowane aplikacje. Jednak niekoniecznie odpowiadają one Twoim potrzebom. Mamy świadomość, że potrzeby profesjonalnego Rolnika są bardziej rozbudowane i konkretne. To pozwoliło nam stworzyć narzędzie, którego rynek się domaga. Naszym celem nie było rozwiązanie wszystkich możliwych problemów, bo jest to nierealne. Jednak postanowiliśmy rozwiązać te najbardziej istotne problemy w sposób jak najbardziej profesjonalny.
+<br><br>
+Aplikacja, którą chcemy Ci zaoferować powstała w technologii Django, która jest uzupełnieniem języka programowania Python. Są to bardzo skuteczne rozwiązania, które mają wpływ na wydajność aplikacji oraz jej bezpieczeństwo. Naszym zdaniem to jakich technologii używamy nie jest dla Ciebie najważniejsze. Jednak mamy świadomość, że stosowanie profesjonalnych rozwiązań wpływa na jakość pracy.
+<br><br>
+Można mówić wiele o tym jak bardzo potrzebne są rozwiązania informatyczne dla rolnictwa. Cokolwiek by nie mówić – nic tak nie przekona Ciebie do takich rozwiązań  jak przetestowanie ich! Dlatego przygotowaliśmy dla Ciebie 14 dniowy okres testowy. Nie zobowiązuje Cię on do niczego. Jednak jeśli przekonamy Cię, że nasze narzędzie jest Ci przydatne, to po prostu porozmawiamy o opłaceniu go w systemie abonamentowym. 
+<br><br>
+Aby wziąć się za testowanie – załóż konto użytkownika lub zaloguj się za pomocą Facebooka.
+<br><br>
+Kłaniamy się nisko!<br>
+Zespół Rolnikapp.pl <br>
+
+{% endblock %}
+
+{% block stopka %}
+{% for home in object_list %}
+    {{ home.stopka }}
+    {% endfor %}
+{% endblock %}
