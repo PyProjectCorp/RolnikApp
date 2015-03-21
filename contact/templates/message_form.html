@@ -13,12 +13,13 @@ RolnikApp - formularz kontaktowy
 {% bootstrap_messages %}
 
 {% block content %}
-
+<div id="form" class="container-fluid" style="max-width: 700px; min-width:400px; margin: 50px auto;">
 <form method='post' action="" class="form">
 {% csrf_token %}
 {% bootstrap_form form layout='inline' %}
-<button type=submit>Wyślij</button>
+<button class="btn btn-default" type=submit>Wyślij</button>
 </form>
+</div>
 {% endblock %}
 
 {% block stopka %}
