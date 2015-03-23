@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Twoje zwierzeta
+{% endblock %}
+
+{% block content %}
+<center>
+<a href="{% url 'animalsadd'%}">Dodaj zwierzę</a>
+<table border="1">
+<tr>
+    <td>Oznaczenie</td>
+    <td>Typ zwierzecia</td>
+    <td>Wiek</td>
+    <td>Szacunkowa waga</td>
+    <td>Szacunkowa cena</td>
+    <td>EDYTUJ</td>
+</tr>
+    {% for animal in object_list %}
+    <tr>
+    <td>{{ animal.oznaczenie }}</td>
+    <td>{{ animal.typ }}</td>
+    <td>{{ animal.old }}</td>
+    <td>{{ animal.weight }}</td>
+    <td>{{ animal.price }}</td>
+    <td>edytuj</td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+{% endblock %}
