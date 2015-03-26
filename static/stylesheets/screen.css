@@ -1,0 +1,14 @@
+/* line 1, ../sass/custom/_main.scss */
+#content {
+  max-width: 700px;
+  min-width: 400px;
+  margin: 70px auto 30px;
+}
+/* line 5, ../sass/custom/_main.scss */
+#content .page-header {
+  text-align: center;
+}
+/* line 8, ../sass/custom/_main.scss */
+#content .text-container {
+  padding: 15px;
+}

@@ -1,42 +1,19 @@
 <!doctype html>
 {% load bootstrap3 %}
+{% load staticfiles %}
 <html lang='pl'>
 	<head>
 		<title>{% block title %}RolnikApp{% endblock %}</title>
 		{% bootstrap_css %}
+		  <link href="{% static "stylesheets/screen.css" %}" media="screen, projection" rel="stylesheet" type="text/css" />
+		  <link href="{% static "stylesheets/print.css" %}" media="print" rel="stylesheet" type="text/css" />
+		  <!--[if IE]>
+		      <link href="{% static "stylesheets/ie.css" %}" media="screen, projection" rel="stylesheet" type="text/css" />
+		  <![endif]-->
 	</head>
 	<body>
-		<nav class="navbar navbar-default navbar-fixed-top">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_nav">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <!-- <a class="navbar-brand" href="#">Brand</a> -->
-		    </div>
-		    <div class="collapse navbar-collapse" id="main_nav">
-		      <ul class="nav navbar-nav">
-
-		        <li><a href="{% url 'homepage' %}">Strona glowna</a></li>
-		        <li><a href="{% url 'animals' %}">Zwierzeta</a></li>
-		        <li><a href="{% url 'contact' %}">Kontakt</a></li>
-		      </ul>
-		      <ul class="nav navbar-nav navbar-right">
-		        {% if user.is_authenticated %}
-		        <li><a href="{% url 'account_logout'%}">Wyloguj sie</a></li>
-		        {% else %}
-		            <li><a href="{% url 'account_login'%}">Zaloguj sie</a></li>
-		            <li><a href="{% url 'account_signup'%}">Zaloz konto</a></li>
-		        {% endif %}
-		      </ul>
-		    </div>
-		  </div>
-		</nav>
-
-		<div id="content" class="container-fluid" style="max-width: 700px; min-width:400px; margin: 50px auto;">
+		{% include 'navbar.html' %}
+		<div id="content" class="container-fluid">
 			{% block content %}
 			{% endblock %}
 		</div>
