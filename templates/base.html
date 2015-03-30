@@ -21,7 +21,9 @@
 		      <ul class="nav navbar-nav">
 
 		        <li><a href="{% url 'homepage' %}">Strona glowna</a></li>
+		        {% if user.is_authenticated %}
 		        <li><a href="{% url 'animals' %}">Zwierzeta</a></li>
+		        {% endif %}
 		        <li><a href="{% url 'contact' %}">Kontakt</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">

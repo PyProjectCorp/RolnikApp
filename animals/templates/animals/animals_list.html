@@ -16,15 +16,18 @@ Twoje zwierzeta
     <td>Szacunkowa cena</td>
     <td>EDYTUJ</td>
 </tr>
+{{ user.username }}
     {% for animal in object_list %}
+        {% ifequal animal.user user %}
     <tr>
     <td>{{ animal.oznaczenie }}</td>
     <td>{{ animal.typ }}</td>
     <td>{{ animal.old }}</td>
     <td>{{ animal.weight }}</td>
     <td>{{ animal.price }}</td>
-    <td>edytuj</td>
+    <td></td>
     </tr>
+        {% endifequal %}
     {% endfor %}
 </table>
 </center>
